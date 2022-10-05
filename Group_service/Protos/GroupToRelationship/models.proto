@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Group_service.Protos.GroupToRelationship";
+
+package relationship;
+
+
+
+////////////////////////////////////
+//		    PROTO MODELS		  //
+////////////////////////////////////

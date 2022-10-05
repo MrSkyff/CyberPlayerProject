@@ -1,0 +1,13 @@
+﻿syntax = "proto3";
+
+import "ProtoModels/model_name.proto";
+
+option csharp_namespace = "project_name";
+
+package model;
+
+
+
+service ServiceName {
+
+}

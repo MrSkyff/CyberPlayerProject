@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "Relationship_service.Protos.GroupRelationShip";
+
+package relationship;
+
+
+
+//||||||||||||||||||||||||||||||||\\
+//			 RPC ACTIONS		  \\
+//||||||||||||||||||||||||||||||||\\
+
+message GruopIdsByGameIdRequest{
+	int32 id = 1;
+}
+message GruopIdsByGameIdResponse{
+	repeated int32 ids = 1;
+}

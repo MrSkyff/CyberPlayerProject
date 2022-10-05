@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "Protos/GameToGroup/models.proto";
+
+option csharp_namespace = "Group_service.Protos.GameToGroup";
+
+package group;
+
+
+
+////////////////////////////////////
+//			 RPC ACTIONS		  //
+////////////////////////////////////
+
+message GroupListByGameIdRequest{
+	int32 id = 1;
+}
+message GroupListByGameIdResponse{
+	repeated GroupSimpleProto groups = 1;
+}

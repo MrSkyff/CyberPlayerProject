@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "Protos/GroupToRelationship/models.proto";
+
+option csharp_namespace = "Group_service.Protos.GroupToRelationship";
+
+package relationship;
+
+
+
+////////////////////////////////////
+//			 RPC ACTIONS		  //
+////////////////////////////////////
+
+message GroupsByGameRequest{
+	int32 id = 1;
+}
+message GroupsByGameResponse{
+	repeated int32 ids = 1;
+}

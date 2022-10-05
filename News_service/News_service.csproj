@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+
+	<ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.48.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="Protos\News\actions.proto" GrpcServices="Server" />
+		<Protobuf Include="Protos\News\models.proto" GrpcServices="Server" />
+		<Protobuf Include="Protos\News\services.proto" GrpcServices="Server" />
+	</ItemGroup>
+
+</Project>

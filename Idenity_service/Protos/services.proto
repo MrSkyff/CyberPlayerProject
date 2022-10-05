@@ -1,0 +1,14 @@
+﻿syntax = "proto3";
+
+import "ProtoModels/user.proto";
+
+
+option csharp_namespace = "Identity_service";
+
+package model;
+
+message EmptyProto{}
+
+service Identity{
+	rpc Login (LoginViewProto) returns (UserProto);
+}

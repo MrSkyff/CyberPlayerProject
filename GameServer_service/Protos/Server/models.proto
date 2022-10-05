@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option csharp_namespace = "Server_service.Protos.Server";
+
+package server;
+
+
+
+////////////////////////////////////
+//		    PROTO MODELS		  //
+////////////////////////////////////
+
+message ServerProto {
+	int32 id = 1;
+	string name = 2;
+	string description = 3;
+	string ip = 4;
+	string port = 5;
+	int32 gameId = 6;
+	int32 groupId = 7;
+}
+
+message ServerSimpleProto {
+	int32 id = 1;
+	string name = 2;
+	string ip = 4;
+	string port = 5;
+}

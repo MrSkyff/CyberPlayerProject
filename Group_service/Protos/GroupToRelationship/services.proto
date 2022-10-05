@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "Protos/GroupToRelationship/actions.proto";
+
+option csharp_namespace = "Group_service.Protos.GroupToRelationship";
+
+package relationship;
+
+
+
+////////////////////////////////////
+//			  SERVICES			  //
+////////////////////////////////////
+
+ service GroupToRelationship {
+	rpc TransferGroupIdsByGameId (GroupsByGameRequest) returns (GroupsByGameResponse);
+ }

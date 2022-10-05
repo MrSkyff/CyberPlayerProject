@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "Wiki_service": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5111;https://localhost:7111",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

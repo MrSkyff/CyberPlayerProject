@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+import "Protos/Server/models.proto";
+
+option csharp_namespace = "Server_service.Protos.Server";
+
+package server;
+
+
+
+////////////////////////////////////
+//			 RPC ACTIONS		  //
+////////////////////////////////////
+
+message ServerListRequest{
+}
+message ServerListResponse{
+	repeated ServerProto servers = 1;
+}
+
+message ServerByIdRequest{
+	int32 id = 1;
+}
+message ServerByIdResponse{
+	ServerProto server = 1;
+}
+
+message ServerListByGameIdRequest{
+	int32 id = 1;
+}
+message ServerListByGameIdResponse{
+	repeated ServerSimpleProto servers = 1;
+}
+
+message ServerListByGroupRequest{
+	int32 id = 1;
+}
+message ServerListByGroupResponse{
+	repeated ServerProto servers = 1;
+}

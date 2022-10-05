@@ -1,0 +1,26 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "ApiGateway";
+
+package model;
+
+service Groups{
+	rpc GetGroupList (EmptyGroup) returns (GroupList);
+	rpc GetGroupListByIds (GroupsByGameId) returns (GroupList);
+}
+
+message EmptyGroup{}
+
+message Group{
+	int32 id = 1;
+	string name = 2;
+	string description = 3;
+}
+
+message GroupList{
+	repeated Group groups = 1;
+}
+
+message GroupsByGameId{
+	int32 id = 1;
+}

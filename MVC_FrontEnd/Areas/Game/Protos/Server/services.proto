@@ -1,0 +1,15 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.Game.Protos.Server";
+
+package server;
+
+
+
+////////////////////////////////////
+//			  SERVICES			  //
+////////////////////////////////////
+
+//service GameToServer {
+//	rpc GetServerListByGameId (ServerListByGameIdRequest) returns (ServerListByGameIdResponse);
+//}

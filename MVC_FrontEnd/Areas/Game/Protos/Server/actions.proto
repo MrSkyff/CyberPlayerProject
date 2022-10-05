@@ -1,0 +1,12 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.Game.Protos.Server";
+
+package server;
+
+
+
+////////////////////////////////////
+//			 RPC ACTIONS		  //
+////////////////////////////////////
+

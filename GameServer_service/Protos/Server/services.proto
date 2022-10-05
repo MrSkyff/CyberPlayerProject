@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+
+import "Protos/Server/actions.proto";
+
+option csharp_namespace = "Server_service.Protos.Server";
+
+package server;
+
+
+
+////////////////////////////////////
+//			  SERVICES			  //
+////////////////////////////////////
+
+service GameToServer{
+	rpc GetServerListByGameId (ServerListByGameIdRequest) returns (ServerListByGameIdResponse);
+}
+

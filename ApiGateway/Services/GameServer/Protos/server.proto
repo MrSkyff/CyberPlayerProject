@@ -1,0 +1,30 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "ApiGateway";
+
+package model;
+
+service Servers {
+	rpc GetServerList (EmptyServer) returns (ServerList);
+	rpc GetServersByGame (GetServerByGameId) returns (ServerList);
+}
+
+message EmptyServer{}
+
+message Server {
+	int32 id = 1;
+	string name = 2;
+	string description = 3;
+	string ip = 4;
+	string port = 5;
+	int32 gameId = 6;
+	int32 groupId = 7;
+}
+
+message ServerList {
+	repeated Server servers = 1;
+}
+
+message GetServerByGameId{
+	int32 id = 1;
+}

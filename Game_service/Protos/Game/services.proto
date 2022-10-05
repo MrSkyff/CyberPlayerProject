@@ -1,0 +1,23 @@
+﻿syntax = "proto3";
+
+import "Protos/Game/actions.proto";
+
+option csharp_namespace = "Game_service.ProtoModels.Game";
+
+package game;
+
+
+
+//||||||||||||||||||||||||||||||||\\
+//			  SERVICES			  \\
+//||||||||||||||||||||||||||||||||\\
+
+service Game {
+	rpc GetGameList (GameListRequest) returns (GameListResponse);
+	rpc GetGameById (GameByIdRequest) returns (GameByIdResponse);
+
+	rpc CreateGame (CreateGameRequest) returns (CreateGameResponse);
+	rpc UpdateGame (UpdateGameRequest) returns (UpdateGameResponse);
+}
+
+//================================//

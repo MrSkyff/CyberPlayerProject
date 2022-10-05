@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+	
+	<ItemGroup>
+		<Protobuf Include="Protos\game.proto" GrpcServices="Client" />
+		<Protobuf Include="Services\GameServer\Protos\server.proto" GrpcServices="Client" />
+		<Protobuf Include="Services\Group\Protos\group.proto" GrpcServices="Client" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.21.4" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.47.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.47.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Services\Game\Controllers\" />
+	  <Folder Include="Services\Game\Protos\" />
+	  <Folder Include="Services\Identity\" />
+	  <Folder Include="Services\User\" />
+	</ItemGroup>
+
+</Project>

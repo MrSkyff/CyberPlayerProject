@@ -1,0 +1,131 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<!-- ======================================================================== -->
+		<!-- ========================== GAME SERVICE START ========================== -->
+		<!-- ======================================================================== -->
+		<!-- ++++++++++++++++++++++++++++  GAME PROTOS ++++++++++++++++++++++++++++++ -->
+		<Protobuf Include="Areas\Game\Protos\Game\actions.proto" GrpcServices="Client" />
+		<Protobuf Include="Areas\Game\Protos\Game\models.proto" GrpcServices="Client" />
+		<Protobuf Include="Areas\Game\Protos\Game\services.proto" GrpcServices="Client" />
+		<!-- ++++++++++++++++++++++++++++  GROUP PROTOS +++++++++++++++++++++++++++++ -->
+		<Protobuf Include="Areas\Game\Protos\Group\actions.proto" GrpcServices="Client" />
+		<Protobuf Include="Areas\Game\Protos\Group\models.proto" GrpcServices="Client" />
+		<Protobuf Include="Areas\Game\Protos\Group\services.proto" GrpcServices="Client" />
+		<!-- +++++++++++++++++++++++++++  SERVER PROTOS +++++++++++++++++++++++++++++ -->
+		<Protobuf Include="Areas\Game\Protos\Server\actions.proto" GrpcServices="Client" />
+		<Protobuf Include="Areas\Game\Protos\Server\models.proto" GrpcServices="Client" />
+		<Protobuf Include="Areas\Game\Protos\Server\services.proto" GrpcServices="Client" />
+		<!-- ========================================================================= -->
+		<!-- ========================== GAME SERVICE END ============================= -->
+		<!-- ========================================================================= -->
+
+		<!-- ======================================================================== -->
+		<!-- ========================= GROUP SERVICE START ========================== -->
+		<!-- ======================================================================== -->
+		<!-- +++++++++++++++++++++++++++  GROUP PROTOS ++++++++++++++++++++++++++++++ -->
+		<!-- ======================================================================== -->
+		<!-- ======================== GROUP SERVICE END ============================= -->
+		<!-- ======================================================================== -->
+
+		<!-- ======================================================================== -->
+		<!-- ======================== SERVER SERVICE START ========================== -->
+		<!-- ======================================================================== -->
+		<!-- +++++++++++++++++++++++++++  SERVER PROTOS ++++++++++++++++++++++++++++++ -->
+		<!-- ======================================================================== -->
+		<!-- ======================= SERVER SERVICE END ============================= -->
+		<!-- ======================================================================== -->
+	</ItemGroup>
+
+
+	<ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.21.4" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.47.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.47.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
+    <PackageReference Include="protobuf-net.BuildTools" Version="3.1.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+
+	<ItemGroup>
+	  <Folder Include="Areas\Forum\Controllers\" />
+	  <Folder Include="Areas\Forum\Data\" />
+	  <Folder Include="Areas\Forum\Models\" />
+	  <Folder Include="Areas\GameShop\Controllers\" />
+	  <Folder Include="Areas\GameShop\Data\" />
+	  <Folder Include="Areas\GameShop\Models\" />
+	  <Folder Include="Areas\Game\Views\Shared\" />
+	  <Folder Include="Areas\Home\Data\" />
+	  <Folder Include="Areas\Home\Models\" />
+	  <Folder Include="Areas\News\ViewModels\" />
+	  <Folder Include="Areas\Server\Controllers\" />
+	  <Folder Include="Areas\Server\Interfaces\" />
+	  <Folder Include="Areas\Server\Repositories\" />
+	  <Folder Include="Areas\Server\Views\" />
+	  <Folder Include="Areas\User\Controllers\" />
+	  <Folder Include="Areas\User\Data\" />
+	  <Folder Include="Areas\User\Models\" />
+	  <Folder Include="Areas\Wiki\Controllers\" />
+	  <Folder Include="Areas\Wiki\Data\" />
+	  <Folder Include="Areas\Wiki\Models\" />
+	  <Folder Include="Services\" />
+	  <Folder Include="wwwroot\data\groups\NewFolder - Copy %282%29\" />
+	  <Folder Include="wwwroot\data\groups\NewFolder - Copy %283%29\" />
+	  <Folder Include="wwwroot\data\groups\NewFolder - Copy %284%29\" />
+	  <Folder Include="wwwroot\data\groups\NewFolder - Copy %285%29\NewFolder\" />
+	  <Folder Include="wwwroot\data\groups\NewFolder - Copy\" />
+	  <Folder Include="wwwroot\data\groups\NewFolder\" />
+	  <Folder Include="wwwroot\data\servers\" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Content Update="Areas\Forum\Views\_ViewStart.cshtml">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Update="Areas\GameShop\Views\_ViewImports.cshtml">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Update="Areas\Game\Views\_ViewImports.cshtml">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Update="Areas\Group\Views\_ViewImports.cshtml">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Update="Areas\Identity\Views\_ViewImports.cshtml">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Update="Areas\News\Views\_ViewImports.cshtml">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Update="Areas\User\Views\_ViewImports.cshtml">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Update="Areas\Wiki\Views\_ViewImports.cshtml">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
+
+</Project>

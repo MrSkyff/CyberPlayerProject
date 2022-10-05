@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Game_service": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5241;https://localhost:7241",
+      "dotnetRunMessages": true
+    }
+  }
+}

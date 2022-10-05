@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+import "Protos/News/models.proto";
+
+option csharp_namespace = "News_service.Protos.News";
+
+package news;
+
+
+
+//||||||||||||||||||||||||||||||||\\
+//			 RPC ACTIONS		  \\
+//||||||||||||||||||||||||||||||||\\
+
+//=========== NEWS LIST ===========\\
+message NewsListRequest{
+	PaginatorNewsProto pagedNews = 1;
+}
+message NewsListResponse{
+	repeated NewsSimpleProto newsList = 1;
+	PaginatorNewsProto pagedNews = 2;
+}
+//=========== NEWS BY ID ==========\\
+message NewsByIdRequest{
+	int32 id = 1;
+}
+message NewsByIdResponse{
+	NewsProto news = 1;
+}
+//========== NEWS CREATE ==========\\
+message NewsCreateRequest{
+	NewsProto news = 1;
+}
+message NewsCreateResponse{
+	NewsProto news = 1;
+}
+//========== NEWS UPDATE ==========\\
+message NewsUpdateRequest{
+	NewsProto news = 1;
+}
+message NewsUpdateResponse{
+	NewsProto news = 1;
+}
+//========= NEWS BY GAME ==========\\
+message NewsListByGameRequest{
+	int32 id = 1;
+}
+message NewsListByGameResponse{
+	repeated NewsSimpleProto newsList = 1;
+}
+//================================\\
